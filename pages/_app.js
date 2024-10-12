@@ -1,7 +1,14 @@
-import 'tailwindcss/tailwind.css'
+import React, { useContext, useState } from "react";
+import { Layout } from "../components";
+import "tailwindcss/tailwind.css";
+import "../styles/global.scss";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <Layout>
+      <Component {...pageProps}/>
+    </Layout>
+  );
 }
 
-export default MyApp
+export default MyApp;
